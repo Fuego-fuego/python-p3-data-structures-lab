@@ -41,32 +41,22 @@ def get_spicy_food_by_cuisine(spicy_foods, cuisine):
     food = [spicy_food for spicy_food in spicy_foods if spicy_food['cuisine'].lower() == cuisine_lower ]
     return food[0]
 
+
 def print_spiciest_foods(spicy_foods):
     spiciest_foods = get_spiciest_foods(spicy_foods)
     print_spicy_foods(spiciest_foods)
-
-def get_average_heat_level(spicy_foods):
     
+    
+def get_average_heat_level(spicy_foods):    
     number_of_spicy_foods = len(spicy_foods)
     sum = 0
     for spicy_food in spicy_foods:
         sum += spicy_food['heat_level']
     average = sum / number_of_spicy_foods    
     return average
+
+
 def create_spicy_food(spicy_foods, spicy_food):
-    spicy_foods.append(spicy_food)
-    
+    spicy_foods.append(spicy_food)    
     return spicy_foods
 
-# get_names(spicy_foods)
-# get_spiciest_foods(spicy_foods)
-# print_spicy_foods(spicy_foods)
-# get_spicy_food_by_cuisine(spicy_foods, "American")
-get_average_heat_level(spicy_foods)
-# food =   {
-#         "name": "Mapo Tofu",
-#         "cuisine": "Sichuan",
-#         "heat_level": 6,
-#     }
-
-# print(food["heat_level"])
